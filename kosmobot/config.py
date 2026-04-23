@@ -50,5 +50,5 @@ def load_settings() -> Settings:
         current_stage=os.getenv("CURRENT_STAGE", "Регулярка"),
         current_round=int(os.getenv("CURRENT_ROUND", "1")),
         allow_self_scoring=os.getenv("ALLOW_SELF_SCORING", "false").strip().lower() == "true",
-        default_lineup_limits=os.getenv("DEFAULT_LINEUP_LIMITS", "Вратарь=1,Защитник=2,Нападающий=2").strip(),
+        default_lineup_limits=os.getenv("DEFAULT_LINEUP_LIMITS", "Вратарь=1,Защитник=2,Нападающий=3").strip(),
     )
