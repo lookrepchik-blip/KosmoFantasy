@@ -32,7 +32,7 @@ def main() -> None:
         current_stage='Регулярка',
         current_round=1,
         allow_self_scoring=False,
-        default_lineup_limits='Вратарь=1,Защитник=2,Нападающий=2',
+        default_lineup_limits='Вратарь=1,Защитник=2,Нападающий=3',
     )
     services = BotServices(settings=settings, db=db, excel=excel)
     _ = build_application(services)
@@ -42,7 +42,7 @@ def main() -> None:
     players = rosters[participant]
 
     selected = []
-    need = {'Вратарь': 1, 'Защитник': 2, 'Нападающий': 2}
+    need = {'Вратарь': 1, 'Защитник': 2, 'Нападающий': 3}
     used_skater_teams = set()
     for pl in players:
         pos = pl.position.lower()
